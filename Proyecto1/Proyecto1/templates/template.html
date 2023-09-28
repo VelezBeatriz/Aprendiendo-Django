@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Estamos a {{currenttime.day}} y son las {{currenttime.hour}}:{{currenttime.minute}} </p>
+    <p>Hola esta es mi primera plantilla con Django</p>
+    <p>Estos son tus datos:</p>
+    <p>Te llamas {{nombre_alumno}} {{apellido_alumno}} y naciste en {{nacimiento_alumno}} en la ciudad de {{ciudad_alumno}}</p>
+
+    {% if subjectsdaw%}
+    <ol>
+        {% for subject in subjectsdaw %}
+            <li>{{subject.capitalize}}</li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <p>No hay datos al respecto...</p>
+    {% endif%}
+ 
+</body>
+</html>
