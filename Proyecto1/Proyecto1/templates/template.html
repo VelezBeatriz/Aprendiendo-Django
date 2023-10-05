@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    {% include "header.html" %}
+
     <p>Estamos a {{currenttime.day}} y son las {{currenttime.hour}}:{{currenttime.minute}} </p>
     <p>Hola esta es mi primera plantilla con Django</p>
     <p>Estos son tus datos:</p>
@@ -19,7 +13,39 @@
     </ol>
     {% else %}
     <p>No hay datos al respecto...</p>
+        {# ESTE IF-ELSE SOLO FUNCIONA SI TENGO LA VARIABLE NOMBRE_ALUMNO #}
+        {% comment %}
+        {% if nombre_alumno %}
+        <p>{{nombre_alumno}} - DAW2</p>
+        {% endif %}
+        {% endcomment %}
+
     {% endif%}
- 
-</body>
-</html>
+
+    <!-- If - Else  -->
+    {# ESTE IF-ELSE ESTA COMENTADO#}
+    {% comment %}
+    {% if ciudad_alumno == 'Badalona' %}
+    <p>Se nota {{nombre_alumno}} que eres Badalona, eres muy <b>cool</b></p>     
+    {% else %}
+    <p>Tu te lo pierdes {{nombre_alumno}}, ser de Badalona es ser <i>fashion</i>!</p>
+    {% endif %}
+    {% endcomment %}
+
+    <!-- Template Tags -->
+    <h3>Animalitos</h3>
+    <ul>
+     {% for list in newlist %}
+        <li>{{list.upper}}</li>
+    {% empty %}
+        <li>No hay animalitos...</li>
+    {% endfor %}
+    </ul>
+
+    {% comment %}
+    <p>Esto es un texto para rellenar para cuando no sabes que poner:</p>
+    {% lorem 2 p %}
+    {% endcomment %}
+
+    {% include "footer.html" %}
+
