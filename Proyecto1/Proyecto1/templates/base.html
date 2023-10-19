@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Este bloque es dinámico, varia según el contenido -->
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Este es un titulo comun de la plantilla base</h1>
+        <h2>Ejercicios y practicas</h2>
+    </header>
+
+    <!-- Este bloque es dinámico, varia según el contenido -->
+    {% block content %} {% endblock %}
+
+    <footer>Este es un pie comun para toda la plantilla base</footer>
+</body>
+</html>

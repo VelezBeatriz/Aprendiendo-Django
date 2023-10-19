@@ -1,0 +1,13 @@
+<!-- Heredar la estructura -->
+{% extends "base.html" %} 
+
+<!-- Indicar que cambia el titulo y el contenido -->
+
+{% block title %} Curso de Django {% endblock %}
+
+{% block content %} 
+
+<p>Esto es el curso de Django. Ultima actualizacion: {{currentData}}</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d1-UX6aR_TM?si=k8B139IiK57WwluP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+{% endblock %}
